@@ -39,23 +39,37 @@
         </span>
         <div class="brand-text">
           <span class="brand-name">PRAHARI</span>
-          <span class="brand-sub">Fraud &amp; Scam Intelligence</span>
+          <span class="brand-sub" data-i18n="brandSub">Fraud &amp; Scam Intelligence</span>
         </div>
       </div>
 
       <nav class="tabnav" id="tabnav" aria-label="Primary">
-        <button class="tabbtn is-active" data-tab="overview"><span class="tabcode">00</span>Overview</button>
-        <button class="tabbtn" data-tab="scam"><span class="tabcode">01</span>Scam Detector</button>
-        <button class="tabbtn" data-tab="shield"><span class="tabcode">02</span>Fraud Shield</button>
-        <button class="tabbtn" data-tab="locator"><span class="tabcode">03</span>Message Locator</button>
-        <button class="tabbtn" data-tab="currency"><span class="tabcode">04</span>Currency Scan</button>
-        <button class="tabbtn" data-tab="network"><span class="tabcode">05</span>Network Graph</button>
-        <button class="tabbtn" data-tab="crimemap"><span class="tabcode">06</span>Crime Map</button>
-        <button class="tabbtn" data-tab="report"><span class="tabcode">07</span>Report a Scam</button>
+        <button class="tabbtn is-active" data-tab="overview"><span class="tabcode">00</span><span data-i18n="tab00">Overview</span></button>
+        <button class="tabbtn" data-tab="scam"><span class="tabcode">01</span><span data-i18n="tab01">Scam Detector</span></button>
+        <button class="tabbtn" data-tab="shield"><span class="tabcode">02</span><span data-i18n="tab02">Fraud Shield</span></button>
+        <button class="tabbtn" data-tab="locator"><span class="tabcode">03</span><span data-i18n="tab03">Message Locator</span></button>
+        <button class="tabbtn" data-tab="currency"><span class="tabcode">04</span><span data-i18n="tab04">Currency Scan</span></button>
+        <button class="tabbtn" data-tab="network"><span class="tabcode">05</span><span data-i18n="tab05">Network Graph</span></button>
+        <button class="tabbtn" data-tab="crimemap"><span class="tabcode">06</span><span data-i18n="tab06">Crime Map</span></button>
+        <button class="tabbtn" data-tab="report"><span class="tabcode">07</span><span data-i18n="tab07">Report a Scam</span></button>
       </nav>
 
       <div class="topbar-actions">
-        <span class="status-chip"><span class="dot"></span>Live demo</span>
+        <select id="globalLangSwitcher" class="global-lang-select" aria-label="Site language">
+          <option value="en">English</option>
+          <option value="hi">हिन्दी</option>
+          <option value="kn">ಕನ್ನಡ</option>
+          <option value="ta">தமிழ்</option>
+          <option value="bn">বাংলা</option>
+          <option value="te">తెలుగు</option>
+          <option value="mr">मराठी</option>
+          <option value="gu">ગુજરાતી</option>
+          <option value="ml">മലയാളം</option>
+          <option value="pa">ਪੰਜਾਬੀ</option>
+          <option value="or">ଓଡ଼ିଆ</option>
+          <option value="as">অসমীয়া</option>
+        </select>
+        <span class="status-chip"><span class="dot"></span><span data-i18n="statusLive">Live demo</span></span>
         <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark mode" title="Toggle theme">
           <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
             stroke-width="2">
@@ -83,14 +97,14 @@
     <section class="panel is-active" id="panel-overview" data-panel="overview">
       <div class="hero">
         <div class="hero-copy">
-          <span class="eyebrow">DIGITAL PUBLIC SAFETY INTELLIGENCE</span>
-          <h1>Stopping scams before the call connects.</h1>
-          <p class="hero-lede">PRAHARI detects digital‑arrest scams in real time, traces fraud messages back to their
+          <span class="eyebrow" data-i18n="heroEyebrow">DIGITAL PUBLIC SAFETY INTELLIGENCE</span>
+          <h1 data-i18n="heroH1">Stopping scams before the call connects.</h1>
+          <p class="hero-lede" data-i18n="heroLede">PRAHARI detects digital‑arrest scams in real time, traces fraud messages back to their
             origin on a live map, and flags counterfeit currency — built to act at the point of contact, not the point
             of complaint.</p>
           <div class="hero-actions">
-            <button class="btn btn-primary" data-goto="scam">Run the scam detector →</button>
-            <button class="btn btn-ghost" data-goto="locator">Locate a message on the map →</button>
+            <button class="btn btn-primary" data-goto="scam" data-i18n="heroCta1">Run the scam detector →</button>
+            <button class="btn btn-ghost" data-goto="locator" data-i18n="heroCta2">Locate a message on the map →</button>
           </div>
         </div>
         <div class="hero-dial" aria-hidden="true">
@@ -213,32 +227,32 @@
 
     <section class="panel" id="panel-scam" data-panel="scam">
       <div class="panel-head">
-        <span class="eyebrow">MODULE CS‑01</span>
-        <h2>Digital Arrest Scam Detector &amp; Alerting</h2>
-        <p>Paste the transcript of a suspicious call, SMS, or WhatsApp message. The engine scores it against known
+        <span class="eyebrow" data-i18n="scamEyebrow">MODULE CS‑01</span>
+        <h2 data-i18n="scamH2">Digital Arrest Scam Detector &amp; Alerting</h2>
+        <p data-i18n="scamDesc">Paste the transcript of a suspicious call, SMS, or WhatsApp message. The engine scores it against known
           digital‑arrest and impersonation‑scam script patterns — spoofed authority claims, urgency triggers, isolation
           tactics, and payment demands.</p>
       </div>
 
       <div class="workbench">
         <div class="workbench-input">
-          <label for="scamInput">Transcript or message text</label>
+          <label for="scamInput" data-i18n="scamLabel">Transcript or message text</label>
           <textarea id="scamInput" rows="10"
             placeholder="Paste the call transcript or message here…">This is Officer Sharma from the Cyber Crime Cell, Mumbai. A parcel booked under your Aadhaar number has been seized containing illegal substances. You are under digital arrest. Do not disconnect this call or contact anyone. To verify your identity and avoid a warrant, share the OTP sent to your phone immediately and stay on this video call.</textarea>
           <div class="scam-modifiers">
             <label class="modifier-check">
               <input type="checkbox" id="videoCallCheck">
-              <span>Call was on video / WhatsApp video</span>
+              <span data-i18n="checkVideo">Call was on video / WhatsApp video</span>
             </label>
             <label class="modifier-check">
               <input type="checkbox" id="urgencyCheck">
-              <span>Caller demanded immediate action</span>
+              <span data-i18n="checkUrgency">Caller demanded immediate action</span>
             </label>
           </div>
           <div class="workbench-row">
-            <button class="btn btn-primary" id="scamAnalyzeBtn">Analyse transcript</button>
-            <button class="btn btn-ghost" id="scamSampleBtn">Load another sample</button>
-            <button class="btn btn-ghost" id="scamClearBtn">Clear</button>
+            <button class="btn btn-primary" id="scamAnalyzeBtn" data-i18n="scamAnalyse">Analyse transcript</button>
+            <button class="btn btn-ghost" id="scamSampleBtn" data-i18n="scamSample">Load another sample</button>
+            <button class="btn btn-ghost" id="scamClearBtn" data-i18n="scamClear">Clear</button>
             <button class="btn btn-ghost" id="mhaAlertBtn" style="display:none">⬇ Generate MHA Alert</button>
           </div>
           <div id="mhaAlertOut" style="display:none;margin-top:10px;"></div>
@@ -253,9 +267,9 @@
 
     <section class="panel" id="panel-shield" data-panel="shield">
       <div class="panel-head">
-        <span class="eyebrow">MODULE CS‑02</span>
-        <h2>Citizen Fraud Shield</h2>
-        <p>A multi‑channel conversational advisory. Paste a suspicious message or describe a call, choose your language,
+        <span class="eyebrow" data-i18n="shieldEyebrow">MODULE CS‑02</span>
+        <h2 data-i18n="shieldH2">Citizen Fraud Shield</h2>
+        <p data-i18n="shieldDesc">A multi‑channel conversational advisory. Paste a suspicious message or describe a call, choose your language,
           and get an instant plain‑language verdict with next steps — modelled on the WhatsApp / IVR / app experience
           described in the brief.</p>
       </div>
@@ -290,7 +304,7 @@
           </form>
         </div>
         <aside class="shield-side">
-          <h3>Quick checks</h3>
+          <h3 data-i18n="quickChecks">Quick checks</h3>
           <button class="chip-btn"
             data-fill="Your KYC will expire today. Update immediately or your bank account will be blocked: bit.ly/kyc-update">"KYC
             will expire" message</button>
@@ -303,7 +317,7 @@
           <button class="chip-btn"
             data-fill="Hi Mom, I lost my phone, this is my new number, please send money urgently to this UPI ID.">"New
             number" family scam</button>
-          <div class="side-note">
+          <div class="side-note" data-i18n="shieldNote" data-i18n-html>
             <strong>Not sure?</strong> When in doubt, hang up and call the organisation back using the number on their
             official website — never the one the caller gives you.
           </div>
@@ -313,22 +327,22 @@
 
     <section class="panel" id="panel-locator" data-panel="locator">
       <div class="panel-head">
-        <span class="eyebrow">MODULE CS‑03 · GEOSPATIAL</span>
-        <h2>Message Origin Locator</h2>
-        <p>Enter a flagged phone number, sender ID, or message reference. The engine attributes a likely origin point
+        <span class="eyebrow" data-i18n="locEyebrow">MODULE CS‑03 · GEOSPATIAL</span>
+        <h2 data-i18n="locH2">Message Origin Locator</h2>
+        <p data-i18n="locDesc">Enter a flagged phone number, sender ID, or message reference. The engine attributes a likely origin point
           from carrier‑circle and routing signals, plots it on the map with a confidence radius, and surfaces other
           reports linked to the same cluster.</p>
       </div>
 
       <div class="locator-layout">
         <div class="locator-form">
-          <label for="locatorInput">Phone number / sender ID / message reference</label>
+          <label for="locatorInput" data-i18n="locLabel">Phone number / sender ID / message reference</label>
           <div class="locator-inputrow">
             <input id="locatorInput" type="text" placeholder="e.g. +91 98XXXXXX12 or SMS-ID VM-ALRTBK">
-            <button class="btn btn-primary" id="locateBtn">Locate on map</button>
+            <button class="btn btn-primary" id="locateBtn" data-i18n="locBtn">Locate on map</button>
           </div>
           <div class="locator-presets">
-            <span>Try:</span>
+            <span data-i18n="locTry">Try:</span>
             <button class="chip-btn small" data-num="+91 78XX-XX2210">+91 78XX‑XX2210</button>
             <button class="chip-btn small" data-num="VM-KYCALERT">SMS‑ID VM‑KYCALERT</button>
             <button class="chip-btn small" data-num="+91 90XX-XX7734">+91 90XX‑XX7734</button>
@@ -350,16 +364,16 @@
 
     <section class="panel" id="panel-currency" data-panel="currency">
       <div class="panel-head">
-        <span class="eyebrow">MODULE CS‑04</span>
-        <h2>Counterfeit Currency Identification</h2>
-        <p>Upload a photo of a currency note. The scanner runs a simulated forensic checklist across the standard RBI
+        <span class="eyebrow" data-i18n="curEyebrow">MODULE CS‑04</span>
+        <h2 data-i18n="curH2">Counterfeit Currency Identification</h2>
+        <p data-i18n="curDesc">Upload a photo of a currency note. The scanner runs a simulated forensic checklist across the standard RBI
           security features and returns a confidence verdict — the same checklist a bank teller or field officer would
           work through, automated.</p>
       </div>
 
       <div class="currency-layout">
         <div>
-          <span class="denom-label">Select denomination</span>
+          <span class="denom-label" data-i18n="curDenomLabel">Select denomination</span>
           <div class="denomination-row" id="denomRow">
             <button class="denom-btn is-active" data-denom="500">₹500</button>
             <button class="denom-btn" data-denom="200">₹200</button>
@@ -369,8 +383,8 @@
           <div class="currency-upload" id="currencyDrop">
             <input type="file" id="currencyFile" accept="image/*" hidden>
             <div class="upload-icon">🧾</div>
-            <p><strong>Click to upload</strong> or drag a note image here</p>
-            <p class="upload-hint">JPG or PNG · analysed entirely in your browser</p>
+            <p><strong data-i18n="curUploadTitle" data-i18n-html>Click to upload</strong> or drag a note image here</p>
+            <p class="upload-hint" data-i18n="curUploadHint">JPG or PNG · analysed entirely in your browser</p>
             <img id="currencyPreview" alt="" hidden>
           </div>
         </div>
@@ -385,9 +399,9 @@
 
     <section class="panel" id="panel-network" data-panel="network">
       <div class="panel-head">
-        <span class="eyebrow">MODULE CS‑05</span>
-        <h2>Fraud Network Graph Intelligence</h2>
-        <p>Transaction metadata, call records, device fingerprints and account linkages, clustered into one graph. Click
+        <span class="eyebrow" data-i18n="netEyebrow">MODULE CS‑05</span>
+        <h2 data-i18n="netH2">Fraud Network Graph Intelligence</h2>
+        <p data-i18n="netDesc">Transaction metadata, call records, device fingerprints and account linkages, clustered into one graph. Click
           any node to trace its connections — this is the shape that turns isolated victim reports into a
           court‑admissible network case.</p>
       </div>
@@ -396,13 +410,13 @@
           <svg id="networkSvg" viewBox="0 0 800 480" class="network-svg"></svg>
         </div>
         <aside class="network-side" id="networkSide">
-          <h3>Select a node</h3>
-          <p class="output-empty">Click any node in the graph to inspect it.</p>
+          <h3 data-i18n="netSelectNode">Select a node</h3>
+          <p class="output-empty" data-i18n="netNodeHint">Click any node in the graph to inspect it.</p>
         </aside>
       </div>
       <div id="firSection" style="display:none;margin-top:16px;">
         <div class="fir-actions">
-          <button class="btn btn-ghost" id="firGenerateBtn">📄 Generate FIR Intelligence Package</button>
+          <button class="btn btn-ghost" id="firGenerateBtn" data-i18n="firGenBtn">📄 Generate FIR Intelligence Package</button>
           <button class="btn btn-ghost" id="firDownloadBtn" style="display:none">⬇ Download Package</button>
         </div>
         <div id="firOutput" class="fir-output" style="display:none"></div>
@@ -411,18 +425,18 @@
 
     <section class="panel" id="panel-crimemap" data-panel="crimemap">
       <div class="panel-head">
-        <span class="eyebrow">MODULE CS‑06 · GEOSPATIAL</span>
-        <h2>Geospatial Crime Pattern Intelligence</h2>
-        <p>Complaint density across Indian cities, sized by report volume. Filter by fraud category to prioritise patrol
+        <span class="eyebrow" data-i18n="crimeEyebrow">MODULE CS‑06 · GEOSPATIAL</span>
+        <h2 data-i18n="crimeH2">Geospatial Crime Pattern Intelligence</h2>
+        <p data-i18n="crimeDesc">Complaint density across Indian cities, sized by report volume. Filter by fraud category to prioritise patrol
           and enforcement resourcing.</p>
       </div>
       <div class="crimemap-filters" id="crimemapFilters">
-        <button class="filter-chip is-active" data-filter="all">All types</button>
-        <button class="filter-chip" data-filter="arrest">Digital arrest</button>
-        <button class="filter-chip" data-filter="phishing">Phishing / KYC</button>
-        <button class="filter-chip" data-filter="counterfeit">Counterfeit currency</button>
-        <button class="filter-chip" data-filter="investment">Investment fraud</button>
-        <button class="filter-chip" data-filter="romance">Romance scam</button>
+        <button class="filter-chip is-active" data-filter="all" data-i18n="filterAll">All types</button>
+        <button class="filter-chip" data-filter="arrest" data-i18n="filterArrest">Digital arrest</button>
+        <button class="filter-chip" data-filter="phishing" data-i18n="filterPhishing">Phishing / KYC</button>
+        <button class="filter-chip" data-filter="counterfeit" data-i18n="filterCounterfeit">Counterfeit currency</button>
+        <button class="filter-chip" data-filter="investment" data-i18n="filterInvestment">Investment fraud</button>
+        <button class="filter-chip" data-filter="romance" data-i18n="filterRomance">Romance scam</button>
       </div>
       <div id="map-crime" class="leaflet-box tall"></div>
       <div class="crime-stat-bar" id="crimeStatBar">
@@ -446,35 +460,32 @@
 
     <section class="panel" id="panel-report" data-panel="report">
       <div class="panel-head">
-        <span class="eyebrow">RESOURCES</span>
-        <h2>Report a scam</h2>
-        <p>If you've received a suspicious call or message, or already lost money to one, here's exactly what to do
+        <span class="eyebrow" data-i18n="reportEyebrow">RESOURCES</span>
+        <h2 data-i18n="reportH2">Report a scam</h2>
+        <p data-i18n="reportDesc">If you've received a suspicious call or message, or already lost money to one, here's exactly what to do
           next.</p>
       </div>
 
       <div class="report-grid">
         <div class="report-card urgent wide">
-          <h3>In an active digital‑arrest call right now?</h3>
+          <h3 data-i18n="reportActive">In an active digital‑arrest call right now?</h3>
           <ol>
-            <li>Disconnect the call. Real agencies never conduct arrests over video call.</li>
-            <li>Do not share an OTP, PIN, or make any payment.</li>
-            <li>Call the National Cyber Crime Helpline: <strong>1930</strong></li>
-            <li>Report online at <strong>cybercrime.gov.in</strong></li>
+            <li data-i18n="reportStep1">Disconnect the call. Real agencies never conduct arrests over video call.</li>
+            <li data-i18n="reportStep2">Do not share an OTP, PIN, or make any payment.</li>
+            <li data-i18n="reportStep3" data-i18n-html>Call the National Cyber Crime Helpline: <strong>1930</strong></li>
+            <li data-i18n="reportStep4" data-i18n-html>Report online at <strong>cybercrime.gov.in</strong></li>
           </ol>
         </div>
         <div class="report-card">
-          <h3>Already made a payment?</h3>
-          <p>Call <strong>1930</strong> immediately — funds can sometimes be frozen if reported within the first few
-            hours. Keep the transaction ID, the sender's number, and any screenshots ready before you call.</p>
+          <h3 data-i18n="reportPaid">Already made a payment?</h3>
+          <p data-i18n="reportPaidDesc">Call 1930 immediately — funds can sometimes be frozen if reported within the first few hours.</p>
         </div>
         <div class="report-card">
-          <h3>Not sure if it's a scam?</h3>
-          <p>Run the message or call transcript through the <strong>Scam Detector</strong> or chat with <strong>Fraud
-              Shield</strong> on this site first. When in doubt, hang up and call the organisation back using the number
-            on their official website.</p>
+          <h3 data-i18n="reportNotSure">Not sure if it's a scam?</h3>
+          <p data-i18n="reportNotSureDesc">Run the message through the Scam Detector or chat with Fraud Shield first.</p>
         </div>
         <div class="report-card">
-          <h3>Reporting channels</h3>
+          <h3 data-i18n="reportChannels">Reporting channels</h3>
           <ul class="check-list">
             <li>Helpline: 1930 (National Cyber Crime Helpline)</li>
             <li>Online: cybercrime.gov.in</li>
@@ -483,25 +494,24 @@
           </ul>
         </div>
         <div class="report-card">
-          <h3>Protect others</h3>
-          <p>Forward suspicious messages to friends and family who may be less familiar with these tactics, especially
-            elderly relatives — digital‑arrest and KYC scams disproportionately target them.</p>
+          <h3 data-i18n="reportProtect">Protect others</h3>
+          <p data-i18n="reportProtectDesc">Forward suspicious messages to friends and family who may be less familiar with these tactics.</p>
         </div>
 
         <!-- Complaint Intake Form -->
         <div class="complaint-form-card">
-          <h3>📋 File a complaint — guided intake form</h3>
+          <h3 data-i18n="complaintH3">📋 File a complaint — guided intake form</h3>
           <form class="cform" id="complaintForm" novalidate>
             <div class="cfield">
-              <label for="cName">Full name</label>
+              <label for="cName" data-i18n="cNameLabel">Full name</label>
               <input id="cName" type="text" placeholder="Your name" autocomplete="name">
             </div>
             <div class="cfield">
-              <label for="cPhone">Contact number</label>
+              <label for="cPhone" data-i18n="cPhoneLabel">Contact number</label>
               <input id="cPhone" type="tel" placeholder="+91 XXXXX XXXXX" autocomplete="tel">
             </div>
             <div class="cfield">
-              <label for="cIncidentType">Incident type</label>
+              <label for="cIncidentType" data-i18n="cTypeLabel">Incident type</label>
               <select id="cIncidentType">
                 <option value="">Select type…</option>
                 <option value="digital-arrest">Digital arrest / impersonation call</option>
@@ -514,20 +524,20 @@
               </select>
             </div>
             <div class="cfield">
-              <label for="cDate">Date of incident</label>
+              <label for="cDate" data-i18n="cDateLabel">Date of incident</label>
               <input id="cDate" type="date">
             </div>
             <div class="cfield cform-full">
-              <label for="cDescription">Brief description of what happened</label>
+              <label for="cDescription" data-i18n="cDescLabel">Brief description of what happened</label>
               <textarea id="cDescription"
                 placeholder="Describe the incident — what did the caller/sender say, what was requested, what did you do…"></textarea>
             </div>
             <div class="cfield cform-full">
-              <label for="cSuspectNum">Suspect phone number / sender ID (if known)</label>
+              <label for="cSuspectNum" data-i18n="cSuspectLabel">Suspect phone number / sender ID (if known)</label>
               <input id="cSuspectNum" type="text" placeholder="e.g. +91 98XXXXXX12 or SMS-ID VM-ALRTBK">
             </div>
             <div class="cform-actions">
-              <button type="submit" class="btn btn-primary" id="complaintSubmitBtn">Submit complaint</button>
+              <button type="submit" class="btn btn-primary" id="complaintSubmitBtn" data-i18n="cSubmit">Submit complaint</button>
               <span style="font-size:12px;color:var(--text-faint)">This prototype simulates submission. In production,
                 data routes to NCRP / 1930 backend.</span>
             </div>
@@ -543,8 +553,8 @@
   </main>
 
   <footer class="sitefoot">
-    <span>PRAHARI — Digital Public Safety Intelligence</span>
-    <span class="sitefoot-dim">Prototype build · all data on this page is simulated for demonstration purposes.</span>
+    <span data-i18n="footerMain">PRAHARI — Digital Public Safety Intelligence</span>
+    <span class="sitefoot-dim" data-i18n="footerSub">Prototype build · all data on this page is simulated for demonstration purposes.</span>
   </footer>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>

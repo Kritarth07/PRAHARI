@@ -18,6 +18,7 @@ import { initNetworkGraph }                     from './modules/network-graph.js
 import { initCrimeMap, initCrimeMapFilters,
          invalidateCrimeMap }                   from './modules/crime-map.js';
 import { hashString }                           from './modules/utils.js';
+import { initI18n }                             from './modules/i18n.js';
 
 /* =========================================================
    THEME
@@ -298,6 +299,7 @@ document.getElementById('complaintForm').addEventListener('submit', (e) => {
 /* =========================================================
    BOOT — initialise all modules
    ========================================================= */
+initI18n();
 initScamDetector();
 initFraudShield();
 initNetworkGraph();
